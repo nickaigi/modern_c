@@ -1,3 +1,15 @@
+/* What is 'size_t' data type in C ?
+ * It is an unsigned (never negative) integral data type
+ *  - if the compiler is 32bit: it is a typedef for 'unsigned int'
+ *  - if the compiler is 64bit: its a typedef for 'unsigned long long int'
+ *
+ *  In ubuntu 18.04:
+ *      echo | gcc -E -xc -include 'stddef.h' - | grep size_t
+ *  Returns:
+ *      typedef long unsigned int size_t;
+ *
+ */
+
 #include<stdlib.h>
 #include<stdio.h>
 
